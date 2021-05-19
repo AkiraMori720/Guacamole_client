@@ -1,0 +1,13 @@
+<div class="side-bar-menu">
+    <ul class="main-menu">
+        <li ng-repeat="menu in main_menu">
+            <a ng-click="menu.callback()">
+                <i ng-class="menu.iconName + ' ' + (menu.active?'active':'')"></i>
+            </a>
+        </li>
+    </ul>
+    <!-- Menu contents -->
+    <a class="main-profile dropdown-toggle" href="#">
+        <img src="images/default-avatar.png" class="user-profile-img" alt="">
+    </a>
+</div>

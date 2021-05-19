@@ -1,0 +1,36 @@
+<div class="user-info" ng-show="!isAnonymous()">
+    <div class="user-data">
+        <div class="user-img">
+            <img src="images/default-avatar.png" class="user-profile-img" alt="">
+        </div>
+        <div class="user-data-detail">
+<!--            <h3 class="user-full-name" ng-show="fullName">{{fullName}}</h3>-->
+            <p class="profession" ng-show="profession">{{profession}}</p>
+            <div class="user-location" ng-show="location">{{location}}</div>
+        </div>
+        <div class="user-data-status">
+            <guac-user-status-menu></guac-user-status-menu>
+        </div>
+    </div>
+<!--    <div class="dropdown" style="float: left; position: absolute;margin-top: -25px;">-->
+<!--        <a href="#" class="font-size-18 text-muted dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--            <i class="ri-more-2-fill"></i>-->
+<!--        </a>-->
+<!--        <div class="dropdown-menu" style="margin: 0px;">-->
+<!--&lt;!&ndash;            <a class="dropdown-item" href="#"><i class="ri-pencil-fill"></i>&nbsp;Edit Profile</a>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="dropdown-item" href="#"><i class="ri-checkbox-blank-circle-fill"></i>&nbsp;Status</a>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="dropdown-divider"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="dropdown-item" href="#"><i class="ri-checkbox-blank-circle-fill"></i>&nbsp;Online</a>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="dropdown-item" href="#"><i class="ri-checkbox-blank-circle-fill"></i>&nbsp;Away</a>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="dropdown-item" href="#"><i class="ri-checkbox-blank-circle-fill"></i>&nbsp;Invisible</a>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="dropdown-item" href="#"><i class="ri-checkbox-blank-circle-fill"></i>&nbsp;Do not disturb</a>&ndash;&gt;-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="user-actions">
+        <a href="#" class="user-action"> <i class="ri-user-3-line"></i></a>
+        <a href="#" class="user-action"> <i class="ri-shopping-cart-2-line"></i></a>
+        <a href="#" class="user-action"> <i class="ri-group-2-line"></i></a>
+        <a href="#" class="user-action"> <i class="ri-gallery-line"></i></a>
+        <a href="#" class="user-action"> <i class="ri-settings-3-line"></i></a>
+    </div>
+</div>

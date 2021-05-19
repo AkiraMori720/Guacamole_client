@@ -1,0 +1,21 @@
+<div class="home-connection">
+    <a style="display: flex"
+       target="_blank"
+       ng-href="{{ item.getClientURL() }}"
+       ng-class="{active: item.getActiveConnections()}">
+
+        <!-- Connection icon -->
+        <i class="ri-computer-line icon-outer"></i>
+
+        <div class="connection-detail">
+            <!-- Connection name -->
+            <span class="name">{{item.name}}</span>
+
+            <!-- Active user count -->
+            <span class="activeUserCount" ng-show="item.getActiveConnections()"
+                translate="HOME.INFO_ACTIVE_USER_COUNT"
+                translate-values="{USERS: item.getActiveConnections()}"></span>
+        </div>
+    </a>
+    <i class="ri-more-fill"></i>
+</div>

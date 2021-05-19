@@ -1,0 +1,16 @@
+<div class="ss-notification" ng-show="notifications.length">
+    <div class="notification-item" ng-repeat="notification in notifications" id="{{notification.id}}" ng-show="!notification.closed">
+        <div class="notification-close" ng-click="closeNotification(notification.id)">
+            <span class="close-btn">×</span>
+        </div>
+        <div class="notification-content">
+            <a class="user-avatar" href="#">
+                <img src="{{notification.userAvatar}}" class="user-avatar-img" alt="{{notification.username}}">
+            </a>
+            <div class="notification-data">
+                <div class="notification-message"><a href="#" class="notification-username">{{notification.username}}</a> {{notification.message}}</div>
+                <div class="notification-date">{{notification.date}}</div>
+            </div>
+        </div>
+    </div>
+</div>

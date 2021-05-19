@@ -1,0 +1,61 @@
+<div class="login-ui" ng-class="{error: loginError, continuation: isContinuation(), initial: !isContinuation()}" >
+
+    <!-- Login error message -->
+    <p class="login-error" translate="{{loginError.key}}"
+       translate-values="{{loginError.variables}}"></p>
+    <div class="login-header">
+        <div class="header-container">
+            <a class="header-link" href="http://www.shareslate.com/about" target="_blank">About</a>
+            <a class="header-link" href="http://www.shareslate.com/" target="_blank">Login to Share Slate</a>
+        </div>
+    </div>
+    <div class="login-dialog-middle">
+
+        <div class="logo"></div>
+        <div class="login-dialog">
+
+            <form class="login-form" ng-submit="login()">
+
+<!--                &lt;!&ndash; Guacamole version &ndash;&gt;-->
+<!--                <div class="version">-->
+<!--                    <div class="app-name">{{'APP.NAME' | translate}}</div>-->
+<!--                    <div class="version-number">{{'APP.VERSION' | translate}}</div>-->
+<!--                </div>-->
+
+                <!-- Login message/instructions -->
+                <p ng-show="helpText" translate="{{helpText.key}}"
+                   translate-values="{{helpText.variables}}"></p>
+
+                <!-- Login fields -->
+                <div class="login-fields">
+                    <guac-form
+                        namespace="'LOGIN'"
+                        content="remainingFields"
+                        model="enteredValues"
+                        focused="relevantField.name"
+                        data-disabled="submitted"></guac-form>
+                </div>
+
+                <!-- Login/continue button -->
+                <div class="buttons">
+
+                    <input type="submit" name="login" class="login"
+                           ng-disabled="submitted"
+                           value="{{'LOGIN.ACTION_LOGIN' | translate}}"/>
+
+                    <input type="submit" name="login" class="continue-login"
+                           ng-disabled="submitted"
+                           value="{{'LOGIN.ACTION_CONTINUE' | translate}}"/>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+    <div class="login-footer">
+        <div class="footer-label-center">Share Slate Cloudlap - Your Space. Your way.</div>
+        <label class="footer-label">Copyright Share Slate Inc</label>
+    </div>
+</div>

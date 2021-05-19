@@ -1,0 +1,180 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+.home-container {
+
+}
+
+.main-container{
+    display: flex;
+    margin-left: 66px;
+}
+
+.history-unavailable div.recent-connections {
+    display: none;
+}
+
+div.recent-connections,
+div.clipboardDiv,
+div.settings,
+div.all-connections {
+    margin: 1em;
+    padding: 0;
+}
+
+.all-connections .list-buttons {
+    text-align: center;
+    padding: 0;
+}
+
+div.recent-connections {
+    text-align: center;
+}
+
+div.recent-connections div.connection {
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -khtml-border-radius: 0.5em;
+    border-radius: 0.5em;
+    display: inline-block;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    max-width: 75%;
+    overflow: hidden;
+}
+
+a.home-connection, .empty.balancer a.home-connection-group {
+    display: block;
+}
+
+.home-container .group-list-page .home-connection .icon-outer{
+    padding: 9px;
+    background: purple;
+    color: white;
+    font-weight: 900;
+    border-radius: 5px;
+    font-size: 22px
+}
+
+.home-container .group-list-page .home-connection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 8px;
+}
+
+
+.home-container .group-list-page .home-connection .connection-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+    /* Show only expand/collapse icon for connection groups on home screen ... */
+
+.all-connections .connection-group > .caption .icon {
+    display: none;
+}
+
+.all-connections .connection-group > .caption .icon.expand {
+    display: inline-block;
+}
+
+/* ... except for empty balancing groups, which should be rendered as if they
+ * are connections. */
+
+.all-connections .connection-group.empty.balancer > .caption .icon {
+    display: inline-block;
+}
+
+.all-connections .connection-group.empty.balancer > .caption .icon.expand {
+    display: none;
+}
+
+.connections {
+    padding: 2em;
+    width: 100%;
+    height: calc(100vh - 54px);
+}
+
+.main-container .main-side-bar {
+    padding: 2em;
+    max-width: 380px;
+    border-left: solid 3px #f4f3f3;
+    border-right: solid 3px #f4f3f3;
+}
+.main-side-bar .side-menu {
+    padding: 24px 8px 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-side-bar .side-menu .menu-title {
+    font-size: 24px;
+}
+
+.main-side-bar .side-menu i {
+    font-size: 20px;
+}
+
+.main-container .action-tabs{
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-container .action-tabs .action{
+    padding: 12px 16px;
+    color: #495057;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main-container .action-tabs .action:hover {
+    background-color: #edeff5;
+}
+
+.main-container .action-tabs .action.active{
+    background-color: #e6ebf5;
+    border-radius: 6px;
+}
+
+.main-container .main-right-bar {
+    padding: 2em 1em;
+}
+
+@media (max-width: 900px) {
+    .main-container{
+        margin-left: 0;
+        flex-direction: column;
+    }
+    .main-container .main-side-bar {
+        max-width: unset;
+    }
+}
+
+@media (max-width: 1100px) {
+    .main-container .main-right-bar {
+        display: none;
+    }
+}

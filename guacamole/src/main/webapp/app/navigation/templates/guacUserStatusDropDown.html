@@ -1,0 +1,6 @@
+<div class="user-status-container" ng-class="{open: menuShown}"  ng-click="toggleMenu()">
+    <i class="ri-checkbox-blank-circle-fill user-status user-status-{{userStatus}}"></i>
+    <div class="user-status-dropdown"><i class="ri-arrow-down-s-fill status-icon-dropdown"></i></div>
+    <!-- Menu contents -->
+    <div class="user-status-menu-contents" ng-transclude></div>
+</div>

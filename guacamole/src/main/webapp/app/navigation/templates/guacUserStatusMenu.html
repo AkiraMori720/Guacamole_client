@@ -1,0 +1,12 @@
+<div class="user-status-menu" ng-show="!isAnonymous()">
+    <guac-user-status-drop-down user-status="userStatus">
+        <ul class="action-list">
+            <li ng-repeat="status in allStatus">
+                <a class="status-dropdown-item" ng-click="setUserStatus(status.value)">
+                    <i class="ri-checkbox-blank-circle-fill user-status-{{status.value}}"></i>
+                    <span>{{status.name}}</span>
+                </a>
+            </li>
+        </ul>
+    </guac-user-status-drop-down>
+</div>

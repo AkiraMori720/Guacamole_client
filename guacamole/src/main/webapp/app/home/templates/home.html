@@ -1,0 +1,60 @@
+
+<div class="view" ng-class="{loading: !isLoaded()}">
+
+    <div class="connection-list-ui">
+
+        <!-- The recent connections for this user -->
+        <div class="header">
+            <div class="header-logo"></div>
+            <guac-group-list-filter connection-groups="rootConnectionGroups"
+                filtered-connection-groups="filteredRootConnectionGroups"
+                placeholder="'HOME.FIELD_PLACEHOLDER_FILTER' | translate"
+                connection-properties="filteredConnectionProperties"
+                connection-group-properties="filteredConnectionGroupProperties"></guac-group-list-filter>
+            <guac-user-menu></guac-user-menu>
+        </div>
+        <!-- All connections for this user -->
+        <div class="home-container">
+            <guac-side-bar></guac-side-bar>
+            <div class="main-container">
+                <div class="main-side-bar">
+                    <guac-user-info></guac-user-info>
+                    <div class="side-menu">
+                        <span class="menu-title">Features</span>
+                        <i class="ri-add-box-line"></i>
+                    </div>
+                    <div class="action-tabs">
+                        <div class="action" ng-class="{active: currentTab('cloudlap')}" ng-click="setTab('cloudlap')">Cloudlap</div>
+                        <div class="action" ng-class="{active: currentTab('apps')}" ng-click="setTab('apps')">Apps</div>
+                        <div class="action" ng-class="{active: currentTab('codes')}" ng-click="setTab('codes')">Codes</div>
+                    </div>
+                    <div ng-show="currentTab('cloudlap')">
+                        <guac-group-list
+                            connection-groups="filteredRootConnectionGroups"
+                            templates="{
+                                'connection'       : 'app/home/templates/connection.html',
+                                'connection-group' : 'app/home/templates/connectionGroup.html'
+                            }"
+                            page-size="20"></guac-group-list>
+                    </div>
+                    <div ng-show="currentTab('apps')">
+                        <guac-app-list></guac-app-list>
+                    </div>
+                    <div ng-show="currentTab('codes')">
+                        <guac-code-list></guac-code-list>
+                    </div>
+                </div>
+                <div class="connections">
+                    <div class="recent-connections">
+                        <guac-recent-connections root-groups="rootConnectionGroups"></guac-recent-connections>
+                    </div>
+                </div>
+                <div class="main-right-bar">
+                    <guac-recent-activity></guac-recent-activity>
+                </div>
+            </div>
+            <guac-ss-notification></guac-ss-notification>
+        </div>
+    </div>
+
+</div>

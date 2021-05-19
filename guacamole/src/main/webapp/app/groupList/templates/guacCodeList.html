@@ -1,0 +1,16 @@
+<div class="app-list">
+    <ul class="app-list-container">
+        <li class="app-item" ng-repeat="app in apps" ng-click="app.action()">
+            <div class="app-item-container">
+                <div class="app-item-icon">
+                    <i class="{{app.icon}}"></i>
+                </div>
+
+                <div class="app-item-content">
+                    <div class="app-name">{{app.name}}</div>
+                    <span class="app-description">{{app.description}}</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
